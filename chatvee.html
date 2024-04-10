@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Chatbot</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .chat-container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #847df0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .chat-body {
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+        }
+        .chat-input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .user-input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+        .send-btn {
+            padding: 8px 15px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .bot-message {
+            background-color: #f0f0f0;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            max-width: 80%;
+        }
+        .user-message {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            align-self: flex-end;
+            max-width: 80%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Pocket Doctor</div>
+        <div class="chat-body" id="chat-body">
+            <div class="bot-message">Hello! I'm your Pocket Doctor. How can I assist you today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" class="user-input" placeholder="Type your message here...">
+            <button id="send-btn" class="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatBody = document.getElementById('chat-body');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        sendBtn.addEventListener('click', function() {
+            sendMessage(userInput.value);
+            userInput.value = '';
+        });
+
+        function sendMessage(message) {
+            if (message.trim() !== '') {
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('user-message');
+                userMessage.textContent = message;
+                chatBody.appendChild(userMessage);
+                scrollToBottom();
+                // For demonstration purposes, let's assume the bot responds after a short delay
+                setTimeout(function() {
+                    receiveMessage("Sorry, I'm just a Pocket Doctor. I have only medicine information.");
+                }, 500);
+            }
+        }
+
+        function receiveMessage(message) {
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('bot-message');
+            botMessage.textContent = message;
+            chatBody.appendChild(botMessage);
+            scrollToBottom();
+        }
+
+        function scrollToBottom() {
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    </script>
+</body>
+
+</html>
+
