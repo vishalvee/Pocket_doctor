@@ -155,8 +155,30 @@ if (stripos($input, "generic") !== false) {
         } 
 }
 else{
+    ?>
+    <div class="item right">
+                    <div class="msg">
+                        <p><?php echo $input; ?></p>
+                    </div>
+                </div>
+                <div class="item" style="margin-top:80px">
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="msg">
+                    <p>Image, 
+                    Sorry No Result Found
+                  </p>
+                    </div>
+                </div>
+    
+    
+    
+    
+    
+                
+        <?php
 
-    echo"not found";
 
 }
 
