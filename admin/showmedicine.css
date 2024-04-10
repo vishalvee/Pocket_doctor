@@ -1,6 +1,15 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
 
 
+
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0 16px;
+  background-color: #f6f4fc;
+  margin: 0 0px;
+}
 .container h1{
  color: black !important;
   }
@@ -17,7 +26,8 @@
   }
 .images{
 
-    width: 200px;height: 120px;
+    width: 200px;
+    height: 120px;
 }
 
 .rwd-table {
