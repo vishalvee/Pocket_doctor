@@ -1,0 +1,141 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+   /* background-image: url('blueBG.jpg');*/
+   /*background-color: rgb(218, 123, 163);*/
+   background-image: url('slogan.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+header{
+
+margin-top: 0.2%;    width: 100%;
+    display: flex;
+    justify-content: center ;
+}
+nav{
+    color: rgb(255, 255, 255);
+    width: auto;
+}
+nav li{
+    color: rgb(245, 121, 218);
+    list-style: none;
+    text-align: center;
+    margin-right: 1%;
+width: 120px;    
+font-size: 22px;
+}
+.logo{
+    width: 50%;
+    height: auto;
+    position: relative;
+    margin-left: 3%;
+}
+.start button{
+    color: rgb(255, 255, 255);
+    border:6px solid rgb(255, 255, 255);
+    background-color: #6777fd;
+    border-radius: 3rem;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+
+.start {
+    margin-left: 13%;
+    size: 30PX;
+    margin-top: 1%;
+   
+
+}
+.start a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.start button:hover{
+ 
+    color:  #ffffff;
+    background-color: #ec67a3;
+    cursor: pointer;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    border-radius: 60px;
+    align-items: center;
+    height: 80px;
+    
+ 
+   
+}
+nav:hover{
+    background-color: #6779ecb4;
+
+    font-size: 20px;
+}
+nav h1:hover{
+    padding-left:12px;
+    padding-right: 12px;
+    
+    
+}
+
+nav li a{
+    color:  #ffffff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+nav li a:hover{
+    color :#ec67a3;
+    font-family: cursive;
+  
+}
+
+nav h1{
+    color: #ffffff;
+    margin-left: 3%;
+    font-family: cursive;
+padding-left: 25px;
+padding-right: 25px;
+cursor: pointer;
+height: 80px;
+line-height: 80px;
+    text-align: center;
+}
+#show{
+    display: none;
+}
+
+.slogan{
+    color: rgb(255, 255, 255);
+    margin-left: 70%;
+    margin-right: 3%;
+    text-transform: capitalize;
+    
+    
+
+}
+/*
+.mid{
+    margin-top: 10%;
+    background-size: cover;
+    margin-left: 2%;
+}
+.mid img{
+
+
+     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+*/
