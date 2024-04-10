@@ -42,7 +42,7 @@ else{
       <ul>
         <li> <a class="sidebar-list-item " href="http://localhost/Pocket_doctor/admin/admindashboard.php"> <i class="fas fa-home icon"></i><em>Dashboard</em></a></li>
         <li> <a class="sidebar-list-item active" href="/localhost/Pocket_doctor/admin/showmedicine.php"> <i class="fas fa-user icon"></i><em>Show Medicine</em></a></li>
-        <li> <a class="sidebar-list-item" href="#0"> <i class="fas fa-tasks icon"></i><em>Update Medicine </em></a></li>
+        <li> <a class="sidebar-list-item" href="http://localhost/Pocket_doctor/admin/updateadmin.php"> <i class="fas fa-tasks icon"></i><em>Update Medicine </em></a></li>
         <li> <a class="sidebar-list-item" href="http://localhost/Pocket_doctor/admin/deletedata.php"> <i class="fas fa-tasks icon"></i><em>Delete Medicine </em></a></li>
         <li> 
         

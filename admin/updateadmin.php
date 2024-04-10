@@ -43,8 +43,8 @@ else{
       <ul>
         <li> <a class="sidebar-list-item " href="http://localhost/Pocket_doctor/admin/admindashboard.php"> <i class="fas fa-home icon"></i><em>Dashboard</em></a></li>
         <li> <a class="sidebar-list-item " href="/localhost/Pocket_doctor/admin/showmedicine.php"> <i class="fas fa-user icon"></i><em>Show Medicine</em></a></li>
-        <li> <a class="sidebar-list-item" href="http://localhost/Pocket_doctor/admin/updateadmin.php"> <i class="fas fa-tasks icon"></i><em>Update Medicine </em></a></li>
-        <li> <a class="sidebar-list-item active" href="http://localhost/Pocket_doctor/admin/deletedata.php"> <i class="fas fa-tasks icon"></i><em>Delete Medicine </em></a></li>
+        <li> <a class="sidebar-list-item active" href="http://localhost/Pocket_doctor/admin/updateadmin.php"> <i class="fas fa-tasks icon"></i><em>Update Medicine </em></a></li>
+        <li> <a class="sidebar-list-item " href="http://localhost/Pocket_doctor/admin/deletedata.php"> <i class="fas fa-tasks icon"></i><em>Delete Medicine </em></a></li>
         <li> 
         
             <a class="sidebar-list-item " href="#0"> <form method="post" action="" autocomplete="off"">
@@ -102,7 +102,7 @@ while ($data = mysqli_fetch_array($res)) {
         
         </td>
         <td data-th="Due Date" class="action">
-          <span title="Delete " onclick="deleteItem('<?php echo $id; ?>','<?php echo $image; ?>')"> x</span> 
+          <span title="Update " onclick="updateItem('<?php echo $id; ?>')"> 📝</span> 
         </td>
       </tr>
      
@@ -125,22 +125,22 @@ while ($data = mysqli_fetch_array($res)) {
 
 <script>
 
-function deleteItem(id,imagePath) {
+function updateItem(id) {
+
 
     $.ajax({
         type: "POST", //type of method
-        url: "http://localhost/Pocket_doctor/api/deletemedicine.php", //your page
+        url: "http://localhost/Pocket_doctor/api/updateadminid.php", //your page
         data: {
             id: id,
-            imagePath:imagePath
+     
 
         }, // passing the values
         success: function(res) {
       
       
-alert('Medicine Successfully Deleted');
-                window.location.reload();
-           
+            window.document.location.href="http://localhost/Pocket_doctor/admin/adminupdateform.php"
+
             
         }
     });
